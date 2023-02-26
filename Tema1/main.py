@@ -11,3 +11,5 @@ for linie in fin:
         if caracter in linie:
             linie = linie.replace(caracter, "")
     print(linie, end="")
+
+fin.close()
