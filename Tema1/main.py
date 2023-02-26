@@ -1,5 +1,13 @@
 fin = open("data.txt", "rt")
 
+inlocuitori = [
+    ".", ",", "?",
+    "!", "-", "_",
+    ":", ";", "/",
+    "(", ")", "'", '"']
 
-
-fin.close()
+for linie in fin:
+    for caracter in inlocuitori:
+        if caracter in linie:
+            linie = linie.replace(caracter, "")
+    print(linie, end="")
