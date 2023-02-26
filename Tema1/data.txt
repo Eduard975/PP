@@ -1,2 +1,3 @@
-fisier de test, fisier de test!, test;
-test :test'' test, ,test" "test/ ?!
+FISI8er de TEst, fisier de TEst!, test;
+teSt :tESt'' test, ,test" "test/ ?!
+tesT 1999 299 329
