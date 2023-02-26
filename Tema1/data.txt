@@ -1,2 +1,2 @@
-fisier de test, fisier de tes!, tes;
-tes :tes'' test, ,test" "test/ ?!
+fisier de test, fisier de test!, test;
+test :test'' test, ,test" "test/ ?!
