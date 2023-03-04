@@ -4,8 +4,8 @@ public class Main {
     private static double probability(int n, int x) {
         Context polyglot = Context.newBuilder().allowAllAccess(true).build();
         Value result = polyglot.eval("R", """
-                                      func <- function(a, b, c) {
-                                       return(dbinom(a, b, c))
+                                      func <- function(x, n, p) {
+                                       return(dbinom(x, n, p))
                                       }
                                     """).execute(x, n, 0.5);
 
