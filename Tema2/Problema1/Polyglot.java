@@ -36,10 +36,10 @@ class Polyglot {
         // Value result = polyglot.eval("python", "sum(ord(ch) for ch in '" + token +
         // "')");
         Value result = polyglot.eval("python", "result = 0\n" +
-                "for ch in '" + token + "':\n" +
+                "cuvant = '" + token + "'\n" +
+                "cuvant = cuvant[1: -1]\n" +
+                "for ch in cuvant:\n" +
                 "    result += ord(ch)**2 + 2*ord(ch) + 1\n" +
-                "result = str(result)\n" +
-                "result = result[1: len(result) - 1]\n" +
                 "result = int(result)\n" +
                 "result");
 
@@ -71,9 +71,9 @@ class Polyglot {
         }
 
         int j = 0, verify = 5;
-        
+
         while(j < array.getArraySize()) {
-            if(crc[j] != 0) {
+            if(crc[j] != -1) {
                 verify = crc[j];
 
                 for (int i = j; i < array.getArraySize(); i++) {
@@ -81,7 +81,7 @@ class Polyglot {
                     String upper = RToUpper(element);
                     if(verify == crc[i]){
                         System.out.println(upper + " -> " + crc[i]);
-                        crc[i] = 0;
+                        crc[i] = -1;
                     }
                 }
             }
