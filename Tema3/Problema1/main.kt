@@ -22,11 +22,11 @@ fun main() {
 
     var i = 1;
 
-    while(doc.select("item").eq(i).isNotEmpty()){
-        rssFeed.add(i, general_attributes(doc.select("item title").eq(i).text(),
-                                          doc.select("item link").eq(i).text(),
-                                          doc.select("item description").eq(i).text(),
-                                          doc.select("item pubDate").eq(i).text(),
+    while(doc.select("item").eq(i-1).isNotEmpty()){
+        rssFeed.add(i, general_attributes(doc.select("item title").eq(i-1).text(),
+                                          doc.select("item link").eq(i-1).text(),
+                                          doc.select("item description").eq(i-1).text(),
+                                          doc.select("item pubDate").eq(i-1).text(),
                                          ))
 
         print(rssFeed[i].title + "\t" + rssFeed[i].link + "\n");
