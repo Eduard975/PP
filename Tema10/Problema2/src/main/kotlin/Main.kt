@@ -32,7 +32,7 @@ fun threads(v : Vector, alpha: Int){
     }
 }
 
-fun coroutines(v : Vector, alpha: Int) = runBlocking<Unit>{
+fun coroutines(v : Vector, alpha: Int) = runBlocking{
     println("Procesare cu Coroutines\nVector initial: " + v.array.contentToString());
 
     launch{
