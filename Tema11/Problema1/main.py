@@ -16,8 +16,6 @@ async def sum(name, queue):
 async def main():
     queue = asyncio.Queue()
 
-    courtines = []
-
     queue.put_nowait(6)
     queue.put_nowait(678)
     queue.put_nowait(9800)
