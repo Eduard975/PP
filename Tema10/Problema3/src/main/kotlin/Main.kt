@@ -16,6 +16,7 @@ fun coroutines(v : LinkedList<Int>) = runBlocking {
     val process2 = async { sum(v[2]) };
     val process3 = async { sum(v[3]) };
 
+    
     println("---------Coroutines Processing---------\nRezultate Sume: \nSum 0..37: ${process0.await()}"
             + "\nSum 0..49: ${process1.await()}"
             + "\nSum 0..680: ${process2.await()}"
@@ -45,9 +46,7 @@ fun threads(v : LinkedList<Int>) {
     thread(name = "p3"){
         process3 = sum(v[3]);
     }.join()
-
-
-
+    
 
     println("---------Threads Processing---------\nRezultate Sume: \nSum 0..37: ${process0}"
             + "\nSum 0..49: ${process1}"
