@@ -21,7 +21,6 @@ async def main():
     queue.put_nowait(9800)
     queue.put_nowait(323)
 
-
     await asyncio.gather(
         sum("1", queue),
         sum("2", queue),
