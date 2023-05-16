@@ -2,12 +2,10 @@ import subprocess
 
 if __name__ == "__main__":
     command = input("Introduceti comanda: ")
-    raw_commands = command.split("|")
     command_list = []
 
-    for c in raw_commands:
-        command_args = c.split(" ")
-        command_list.append(filter(lambda c: c != "", command_args))
+    for c in command.split("|"):
+        command_list.append(filter(lambda c: c != "", c.split(" ")))
 
     prev = subprocess.run(command_list[0], stdout=subprocess.PIPE)
 
