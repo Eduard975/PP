@@ -11,8 +11,5 @@ def cuvinte():
     print(f'\n\nRezultat lista: {new_result}')
     print(f'\nRezultat ca string: {result_as_string}\n')
 
-
-    
-
 if __name__ == "__main__":
     cuvinte()
