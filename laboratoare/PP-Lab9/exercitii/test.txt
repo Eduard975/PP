@@ -1,0 +1,4 @@
+titlu
+autor
+paragraful 1 este mistoul
+paragraful 2 este fainul
